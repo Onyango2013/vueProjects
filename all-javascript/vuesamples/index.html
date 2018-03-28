@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script src="app.js"></script>
+
+</head>
+<body>
+<div id="app">
+
+	<h1> {{ getFullName().split()}}</h1>
+
+	<h1> Status: {{ age > 60? 'Old' :'Young'}}</h1>
+	<h1> Expected to live: {{ age* 2 > 123? 'Dead' : age *1.5}} Years</h1>
+
+	<input type="text" v-model ="age">
+	
+	<h1> He is Currently : {{ adult()}} </h1>
+
+	<button type="input" @click='clickButton (age)'> Check if Adult</button>>
+</div>
+
+</body>
+</html> 

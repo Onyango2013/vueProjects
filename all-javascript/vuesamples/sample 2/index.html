@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script src="app.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<div id="app">
+	<div class="container">
+		<div class="row">
+			{{ value}}
+			<div class="col-md-12">
+			<p v-if="value > 10" > {{value}} In stock </p>
+
+			<p v-else="value > 0" > {{value}} Items left </p>
+			</div>
+
+			
+			<button @click ="increment()" class="btn btn-secondary col-md-3"> Add Items </button>
+
+			<input type="text" class="form-control col-md-6" name="" v-model='cost'  readonly >
+			<button @click ="decrement()" class=" col-md-3 btn btn-primary">Reduce Items </button>
+		</div>
+		
+	</div>
+
+	 
+</div>
+
+</body>
+</html> 
